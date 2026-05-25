@@ -93,3 +93,41 @@ order by salary DESC;
 Show only first 2 employees.*/
 select * from employees
 limit 2;
+
+select avg(salary)
+from employees;
+
+select max(salary)
+from employees;
+
+select min(salary)
+from employees;
+
+select sum(salary)
+from employees;
+
+select department, count(*)
+from employees
+group by department;
+
+select department, avg(salary)
+from employees
+group by department;
+
+select department, max(salary)
+from employees
+group by department;
+
+select department, avg(salary)
+from employees
+group by department
+order by avg(salary) DESC;
+
+select department, count(*)
+from employees
+group by department
+having count(*)> 1;
+
+select department, count(*)
+from employees
+group by department;
