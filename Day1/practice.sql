@@ -131,3 +131,53 @@ having count(*)> 1;
 select department, count(*)
 from employees
 group by department;
+
+
+/*
+TASK 1
+
+Find total employees.*/
+select * from employees;
+
+/*TASK 2
+Find average salary.*/
+select avg(salary)
+from employees;
+
+/*TASK 3
+Find highest salary*/
+select max(Salary)
+from employees;
+
+/*TASK 4
+Find total salary department-wise.*/
+select department, sum(salary)
+from employees
+group by department;
+
+
+/*TASK 5
+Find employee count department-wise.*/
+select department, count(emp_name)
+from employees
+group by department;
+
+/*TASK 6
+Find departments with more than 1 employee.*/
+select department, count(emp_name)
+from employees
+group by department
+having count(emp_name) > 1;
+
+/*TASK 7
+Find highest salary per department.*/
+select department, max(salary)
+from employees
+group by department;
+
+/*TASK 8
+Show departments ordered by average salary descending.*/
+select department, avg(salary)
+from employees
+group by department
+order by avg(salary) desc;
