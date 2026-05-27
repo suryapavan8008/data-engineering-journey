@@ -86,7 +86,7 @@ select e.emp_name,
 		e.department
 from employees e
 right join departments d
-on e.dept_id = e.dept_id;
+on e.dept_id = d.dept_id;
 
 /*TASK 2
 
@@ -130,7 +130,7 @@ select e.emp_name,
 	d.department
 from employees e
 left join departments d
-on e.dept_id= e.dept_id;
+on e.dept_id= d.dept_id;
 
 
 
