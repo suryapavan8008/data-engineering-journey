@@ -132,5 +132,29 @@ from employees e
 left join departments d
 on e.dept_id= d.dept_id;
 
+/**
+FINAL TASK
+SCENARIO
 
+Management wants:
 
+employee name
+department name
+manager name
+salary category
+
+ONLY for employees earning above 45000.*/
+
+select e.emp_name,
+e.salary,
+d.department ,
+d.manager_name,
+case 
+when e.salary > 60000 then 'high'
+ WHEN e.salary > 45000 THEN 'Medium'
+           ELSE 'Low'
+end as salary_category
+from employees e
+join departments d
+on e.dept_id = d.dept_id
+where e.salary > 45000;
